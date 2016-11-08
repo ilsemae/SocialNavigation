@@ -1,0 +1,45 @@
+<launch>
+
+	<node pkg="turtlesim" name="turtlesim" type="turtlesim_node"/>
+
+	<!- -will take turtle1, make it draw some boundaries, then kill turtle1-->
+	<node pkg="social_navigation" name="environment_setup" type="setup.py" output="screen"/>
+
+	<!-- used to let turtle nodes know that it's ok to start spawning />
+	<param name="setup_complete" value="False" />
+
+	<!-- Walls -->
+	<arg name="hallwidth" default="10" />
+	<param name="hall_width" type="double" value="$(arg hallwidth)" />
+
+	<!-- Each turtle's necessary items to run: controller (uber), position awareness (gps), and params indicating position -->
+
+	<!-- Theo -->
+	<node pkg="social_navigation" name="theo_uber" type="turtle_uber.py" output="screen" args="theo" />
+	<param name="theo_goal" value="" />
+
+	<!-- Josephine -->
+	<node pkg="social_navigation" name="josephine_uber" type="turtle_uber.py" output="screen" args="josephine" />
+	<param name="josephine_goal" value="" />
+
+	<!-- Everett -->
+	<node pkg="social_navigation" name="everett_uber" type="turtle_uber.py" output="screen" args="everett" />
+	<param name="everett_goal" value="" />
+
+	<!-- Robin -->
+	<node pkg="social_navigation" name="robin_uber" type="turtle_uber.py" output="screen" args="robin" />
+	<param name="robin_goal" value="" />
+
+	<!-- Yma -->
+	<node pkg="social_navigation" name="yma_uber" type="turtle_uber.py" output="screen" args="yma" />
+	<param name="yma_goal" value="" />
+
+	<!-- Alan -->
+	<node pkg="social_navigation" name="alan_uber" type="turtle_uber.py" output="screen" args="alan" />
+	<param name="alan_goal" value="" />
+	
+	<!-- Rose -->
+	<node pkg="social_navigation" name="rose_uber" type="turtle_uber.py" output="screen" args="rose" />
+	<param name="rose_goal" value="" />
+
+</launch>

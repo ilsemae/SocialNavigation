@@ -1,0 +1,4 @@
+	<!-- Zed -->
+	<node pkg="social_navigation" name="zed_uber" type="turtle_uber.py" output="screen" args="zed" />
+	<param name="zed_goal" value="" />
+	
